@@ -1,0 +1,26 @@
+name: Update scores
+on:
+  schedule:
+    - cron: "37 10 * * *"   # daily, ~5:37 AM Central (4:37 AM in winter)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: update-scores
+  cancel-in-progress: true
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch scores
+        run: python scripts/fetch_scores.py
+      - name: Commit if changed
+        run: |
+          git config user.name "scores-bot"
+          git config user.email "scores-bot@users.noreply.github.com"
+          git add docs/data.json
+          git diff --cached --quiet || (git commit -m "Update scores" && git push)
