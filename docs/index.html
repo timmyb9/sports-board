@@ -34,7 +34,7 @@ html,body{background:transparent;overflow:hidden}
 <div id="w"><div class="card" id="card"><div class="err">Loading…</div></div></div>
 <script>
 const TZ = "America/Chicago";            // display timezone
-const REFRESH_MS = 5 * 60 * 1000;        // re-read data.json every 5 min
+const REFRESH_MS = 60 * 60 * 1000;       // re-read data.json hourly
 const lg = u => `<span class="lg"><img src="${u}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></span>`;
 const dayKey = d => d.toLocaleDateString("en-CA", {timeZone: TZ});
 
