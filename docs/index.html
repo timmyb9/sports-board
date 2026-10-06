@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Board</title>
+<style>
+:root{--text:#f4f6fb;--muted:#a4adc0;--win:#4ade80;--loss:#f87171;--next:#7dbcff;--live:#fbbf24}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent;overflow:hidden}
+#w{width:100vw;height:100vh;min-height:300px;padding:4px;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text)}
+.card{height:100%;border-radius:18px;background:rgba(10,13,20,.74);border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 28px rgba(0,0,0,.45);overflow:hidden;display:flex;flex-direction:column}
+.team{flex:1;display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.1)}
+.team:first-child{border-top:0}
+.h{display:flex;align-items:center;gap:8px;padding:0 12px;height:32px;background:linear-gradient(90deg,var(--c1),transparent 92%)}
+.h .n{font-weight:800;font-size:15px;letter-spacing:.02em;flex:1}
+.h .rec{font-size:11.5px;color:var(--muted)}
+.body{flex:1;display:flex;flex-direction:column;justify-content:space-evenly}
+.g{display:flex;align-items:center;height:28px;padding:0 8px;font-size:14px;gap:4px;border-left:3px solid transparent;margin-right:4px}
+.g.W{border-left-color:var(--win)}.g.L{border-left-color:var(--loss)}
+.g.N{border-left-color:var(--next);background:rgba(125,188,255,.12)}
+.g.I{border-left-color:var(--live);background:rgba(251,191,36,.14)}
+.d{width:34px;color:var(--muted);font-size:11.5px;flex:none}
+.side{display:flex;align-items:center;gap:4px;width:86px;flex:none}
+.ab{flex:1;font-weight:700;font-size:13.5px;overflow:hidden;white-space:nowrap}
+.sc{font-weight:800;font-variant-numeric:tabular-nums;width:17px;text-align:right}
+.side.lo{color:var(--muted)}.side.lo .ab,.side.lo .sc{font-weight:500}
+.at{color:var(--muted);font-size:10px;width:10px;text-align:center;flex:none}
+.r{flex:1;text-align:right;font-size:11.5px;font-weight:800;white-space:nowrap}
+.W .r{color:var(--win)}.L .r{color:var(--loss)}.N .r{color:var(--next)}.U .r{color:var(--muted);font-weight:600}.I .r{color:var(--live)}
+.lg{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.92);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.lg img{width:16px;height:16px;object-fit:contain}
+.h .lg{width:25px;height:25px}.h .lg img{width:20px;height:20px}
+.err{padding:20px;color:var(--muted);font-size:13px}
+</style></head><body>
+<div id="w"><div class="card" id="card"><div class="err">Loading…</div></div></div>
+<script>
+const TZ = "America/Chicago";            // display timezone
+const REFRESH_MS = 5 * 60 * 1000;        // re-read data.json every 5 min
+const lg = u => `<span class="lg"><img src="${u}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"></span>`;
+const dayKey = d => d.toLocaleDateString("en-CA", {timeZone: TZ});
+
+function label(iso) {
+  const d = new Date(iso), now = new Date();
+  const diff = Math.round((new Date(dayKey(d)) - new Date(dayKey(now))) / 864e5);
+  if (diff === 0) return "Today";
+  if (diff === 1) return "Tmrw";
+  if (diff > 1 && diff < 7) return d.toLocaleDateString("en-US", {timeZone: TZ, weekday: "short"});
+  return d.toLocaleDateString("en-US", {timeZone: TZ, month: "numeric", day: "numeric"});
+}
+function clock(iso) {
+  const p = new Date(iso).toLocaleTimeString("en-US", {timeZone: TZ, hour: "numeric", minute: "2-digit"});
+  return p.replace(" AM", "A").replace(" PM", "P");
+}
+function row(g, teamId) {
+  const a = g.away, h = g.home, mineAway = a.id === teamId;
+  let cls, right;
+  if (g.state === "post") {
+    const mine = mineAway ? a : h, opp = mineAway ? h : a;
+    const won = mine.winner || (mine.score ?? 0) > (opp.score ?? 0);
+    cls = won ? "W" : "L"; right = won ? "W" : "L";
+  } else if (g.state === "in") {
+    cls = "I"; right = "LIVE";
+  } else {
+    cls = "U"; right = /TBD|TBA/i.test(g.detail) ? "TBD" : clock(g.date);
+  }
+  const done = g.state === "post", showScore = g.state !== "pre";
+  const aw = done && (a.winner || a.score > h.score), hw = done && (h.winner || h.score > a.score);
+  const side = (t, win) => `<span class="side ${done && !win ? "lo" : ""}">${lg(t.logo)}<span class="ab">${t.abbr}</span><span class="sc">${showScore ? (t.score ?? "") : ""}</span></span>`;
+  return {cls, html: `<span class="d">${label(g.date)}</span>${side(a, aw)}<span class="at">@</span>${side(h, hw)}<span class="r">${right}</span>`, state: g.state};
+}
+async function load() {
+  const card = document.getElementById("card");
+  try {
+    const d = await (await fetch("data.json?t=" + Date.now())).json();
+    card.innerHTML = d.teams.map(t => {
+      let marked = false;                       // first unplayed game gets the "next" highlight
+      const rows = t.games.map(g => {
+        const r = row(g, t.id);
+        if (!marked && r.state === "pre") { r.cls = "N"; marked = true; }
+        return `<div class="g ${r.cls}">${r.html}</div>`;
+      }).join("");
+      return `<div class="team"><div class="h" style="--c1:${t.color}">${lg(t.logo)}<span class="n">${t.name}</span><span class="rec">${t.record}</span></div><div class="body">${rows}</div></div>`;
+    }).join("");
+  } catch (e) {
+    if (!card.querySelector(".team")) card.innerHTML = `<div class="err">Scores unavailable</div>`;
+  }
+}
+load(); setInterval(load, REFRESH_MS);
+</script></body></html>
