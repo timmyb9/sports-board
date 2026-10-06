@@ -7,7 +7,7 @@ Edit TEAMS below to add or remove teams (sport path + ESPN team id).
 import json, os, sys, datetime as dt, urllib.request
 
 TEAMS = [  # key, display name, ESPN sport path, ESPN team id, header color override (optional)
-    ("IOWA", "Hawkeyes", "football/college-football", "2294", "#b38f00"),
+    #("IOWA", "Hawkeyes", "football/college-football", "2294", "#b38f00"),
     ("KC",   "Chiefs",   "football/nfl",              "12",   None),
     ("NJD",  "Devils",   "hockey/nhl",                "11",   "#c8102e"),
     ("SF",   "49ers",    "football/nfl",              "25",   None),
