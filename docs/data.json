@@ -1,53 +1,33 @@
 {
- "updated": "2026-10-18T14:07:21+00:00",
+ "updated": "2026-10-19T17:07:51+00:00",
  "teams": [
   {
    "key": "KC",
    "id": "12",
    "name": "Chiefs",
    "full": "Kansas City Chiefs",
-   "record": "4-0",
+   "record": "5-0",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
    "color": "#e31837",
    "games": [
     {
-     "id": "401872976",
-     "date": "2026-10-04T20:25Z",
-     "state": "post",
-     "detail": "Final",
-     "away": {
-      "id": "12",
-      "abbr": "KC",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
-      "score": 30,
-      "winner": true
-     },
-     "home": {
-      "id": "13",
-      "abbr": "LV",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
-      "score": 27,
-      "winner": false
-     }
-    },
-    {
      "id": "401873006",
      "date": "2026-10-18T20:25Z",
-     "state": "pre",
-     "detail": "10/18 - 4:25 PM EDT",
+     "state": "post",
+     "detail": "Final",
      "away": {
       "id": "24",
       "abbr": "LAC",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lac.png",
-      "score": null,
+      "score": 6,
       "winner": false
      },
      "home": {
       "id": "12",
       "abbr": "KC",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
-      "score": null,
-      "winner": false
+      "score": 22,
+      "winner": true
      }
     },
     {
@@ -66,6 +46,26 @@
       "id": "26",
       "abbr": "SEA",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sea.png",
+      "score": null,
+      "winner": false
+     }
+    },
+    {
+     "id": "401873033",
+     "date": "2026-11-01T21:25Z",
+     "state": "pre",
+     "detail": "11/1 - 4:25 PM EST",
+     "away": {
+      "id": "12",
+      "abbr": "KC",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "7",
+      "abbr": "DEN",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
       "score": null,
       "winner": false
      }
