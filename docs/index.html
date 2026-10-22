@@ -30,6 +30,7 @@ html,body{background:transparent;overflow:hidden}
 .lg img{width:16px;height:16px;object-fit:contain}
 .h .lg{width:25px;height:25px}.h .lg img{width:20px;height:20px}
 .err{padding:20px;color:var(--muted);font-size:13px}
+
 /* Wide/short box (e.g. a bottom strip): lay the teams out side by side */
 @media (min-aspect-ratio: 3/1){
   #w{min-height:0}
@@ -90,11 +91,11 @@ async function load() {
     const d = await (await fetch("data.json?t=" + Date.now())).json();
     card.innerHTML = d.teams.map(t => {
       let marked = false;                       // first unplayed game gets the "next" highlight
-      const rows = t.games.map(g => {
+      const rows = t.games.filter(g => g.state !== "post").map(g => {   // hide completed games
         const r = row(g, t.id);
         if (!marked && r.state === "pre") { r.cls = "N"; marked = true; }
         return `<div class="g ${r.cls}">${r.html}</div>`;
-      }).join("");
+      }).join("") || `<div class="err">No upcoming games</div>`;
       return `<div class="team"><div class="h" style="--c1:${t.color}">${lg(t.logo)}<span class="n">${t.name}</span><span class="rec">${t.record}</span></div><div class="body">${rows}</div></div>`;
     }).join("");
   } catch (e) {
