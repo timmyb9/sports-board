@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T15:31:54+00:00",
+ "updated": "2026-10-23T15:24:42+00:00",
  "teams": [
   {
    "key": "KC",
@@ -77,20 +77,20 @@
    "id": "11",
    "name": "Devils",
    "full": "New Jersey Devils",
-   "record": "5-4-0",
+   "record": "6-4-0",
    "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
    "color": "#c8102e",
    "games": [
     {
-     "id": "401892540",
-     "date": "2026-10-20T23:00Z",
+     "id": "401892555",
+     "date": "2026-10-22T23:00Z",
      "state": "post",
      "detail": "Final",
      "away": {
-      "id": "17",
-      "abbr": "COL",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
-      "score": 3,
+      "id": "25",
+      "abbr": "ANA",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+      "score": 1,
       "winner": false
      },
      "home": {
@@ -99,26 +99,6 @@
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
       "score": 4,
       "winner": true
-     }
-    },
-    {
-     "id": "401892555",
-     "date": "2026-10-22T23:00Z",
-     "state": "pre",
-     "detail": "10/22 - 7:00 PM EDT",
-     "away": {
-      "id": "25",
-      "abbr": "ANA",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
-      "score": null,
-      "winner": false
-     },
-     "home": {
-      "id": "11",
-      "abbr": "NJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": null,
-      "winner": false
      }
     },
     {
@@ -137,6 +117,26 @@
       "id": "11",
       "abbr": "NJ",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
+      "score": null,
+      "winner": false
+     }
+    },
+    {
+     "id": "401892590",
+     "date": "2026-10-28T00:00Z",
+     "state": "pre",
+     "detail": "10/27 - 8:00 PM EDT",
+     "away": {
+      "id": "11",
+      "abbr": "NJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "9",
+      "abbr": "DAL",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/dal.png",
       "score": null,
       "winner": false
      }
