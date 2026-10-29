@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T16:47:46+00:00",
+ "updated": "2026-10-29T17:03:13+00:00",
  "teams": [
   {
    "key": "KC",
@@ -77,48 +77,28 @@
    "id": "11",
    "name": "Devils",
    "full": "New Jersey Devils",
-   "record": "8-4-0",
+   "record": "8-5-0",
    "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
    "color": "#c8102e",
    "games": [
     {
-     "id": "401892590",
-     "date": "2026-10-28T00:00Z",
+     "id": "401892598",
+     "date": "2026-10-29T01:00Z",
      "state": "post",
      "detail": "Final",
      "away": {
       "id": "11",
       "abbr": "NJ",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": 5,
-      "winner": true
-     },
-     "home": {
-      "id": "9",
-      "abbr": "DAL",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/dal.png",
-      "score": 1,
-      "winner": false
-     }
-    },
-    {
-     "id": "401892598",
-     "date": "2026-10-29T01:00Z",
-     "state": "pre",
-     "detail": "10/28 - 9:00 PM EDT",
-     "away": {
-      "id": "11",
-      "abbr": "NJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": null,
+      "score": 2,
       "winner": false
      },
      "home": {
       "id": "17",
       "abbr": "COL",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/col.png",
-      "score": null,
-      "winner": false
+      "score": 5,
+      "winner": true
      }
     },
     {
@@ -137,6 +117,26 @@
       "id": "37",
       "abbr": "VGK",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
+      "score": null,
+      "winner": false
+     }
+    },
+    {
+     "id": "401892636",
+     "date": "2026-11-04T00:30Z",
+     "state": "pre",
+     "detail": "11/3 - 7:30 PM EST",
+     "away": {
+      "id": "6",
+      "abbr": "EDM",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/edm.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "11",
+      "abbr": "NJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
       "score": null,
       "winner": false
      }
