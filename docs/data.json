@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T20:28:58+00:00",
+ "updated": "2026-11-04T18:11:46+00:00",
  "teams": [
   {
    "key": "KC",
@@ -77,48 +77,28 @@
    "id": "11",
    "name": "Devils",
    "full": "New Jersey Devils",
-   "record": "9-5-0",
+   "record": "10-5-0",
    "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
    "color": "#c8102e",
    "games": [
     {
-     "id": "401892611",
-     "date": "2026-10-30T22:00Z",
-     "state": "post",
-     "detail": "Final",
-     "away": {
-      "id": "11",
-      "abbr": "NJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": 5,
-      "winner": true
-     },
-     "home": {
-      "id": "37",
-      "abbr": "VGK",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/vgk.png",
-      "score": 2,
-      "winner": false
-     }
-    },
-    {
      "id": "401892636",
      "date": "2026-11-04T00:30Z",
-     "state": "pre",
-     "detail": "11/3 - 7:30 PM EST",
+     "state": "post",
+     "detail": "Final/SO",
      "away": {
       "id": "6",
       "abbr": "EDM",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/edm.png",
-      "score": null,
+      "score": 3,
       "winner": false
      },
      "home": {
       "id": "11",
       "abbr": "NJ",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": null,
-      "winner": false
+      "score": 4,
+      "winner": true
      }
     },
     {
@@ -137,6 +117,26 @@
       "id": "11",
       "abbr": "NJ",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
+      "score": null,
+      "winner": false
+     }
+    },
+    {
+     "id": "401892667",
+     "date": "2026-11-08T00:00Z",
+     "state": "pre",
+     "detail": "11/7 - 7:00 PM EST",
+     "away": {
+      "id": "11",
+      "abbr": "NJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "12",
+      "abbr": "NYI",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyi.png",
       "score": null,
       "winner": false
      }
