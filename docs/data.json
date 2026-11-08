@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T17:39:13+00:00",
+ "updated": "2026-11-08T16:46:00+00:00",
  "teams": [
   {
    "key": "KC",
@@ -77,47 +77,27 @@
    "id": "11",
    "name": "Devils",
    "full": "New Jersey Devils",
-   "record": "11-5-0",
+   "record": "12-5-0",
    "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
    "color": "#c8102e",
    "games": [
     {
-     "id": "401892651",
-     "date": "2026-11-06T00:00Z",
+     "id": "401892667",
+     "date": "2026-11-08T00:00Z",
      "state": "post",
      "detail": "Final/OT",
      "away": {
-      "id": "19",
-      "abbr": "STL",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/stl.png",
-      "score": 4,
-      "winner": false
-     },
-     "home": {
       "id": "11",
       "abbr": "NJ",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
       "score": 5,
       "winner": true
-     }
-    },
-    {
-     "id": "401892667",
-     "date": "2026-11-08T00:00Z",
-     "state": "pre",
-     "detail": "11/7 - 7:00 PM EST",
-     "away": {
-      "id": "11",
-      "abbr": "NJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": null,
-      "winner": false
      },
      "home": {
       "id": "12",
       "abbr": "NYI",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyi.png",
-      "score": null,
+      "score": 4,
       "winner": false
      }
     },
@@ -137,6 +117,26 @@
       "id": "21",
       "abbr": "TOR",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
+      "score": null,
+      "winner": false
+     }
+    },
+    {
+     "id": "401892688",
+     "date": "2026-11-11T00:00Z",
+     "state": "pre",
+     "detail": "11/10 - 7:00 PM EST",
+     "away": {
+      "id": "11",
+      "abbr": "NJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "28",
+      "abbr": "WPG",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png",
       "score": null,
       "winner": false
      }
