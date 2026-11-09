@@ -1,53 +1,33 @@
 {
- "updated": "2026-11-08T16:46:00+00:00",
+ "updated": "2026-11-09T20:59:52+00:00",
  "teams": [
   {
    "key": "KC",
    "id": "12",
    "name": "Chiefs",
    "full": "Kansas City Chiefs",
-   "record": "5-2",
+   "record": "6-2",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
    "color": "#e31837",
    "games": [
     {
-     "id": "401873033",
-     "date": "2026-11-01T21:25Z",
-     "state": "post",
-     "detail": "Final",
-     "away": {
-      "id": "12",
-      "abbr": "KC",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
-      "score": 24,
-      "winner": false
-     },
-     "home": {
-      "id": "7",
-      "abbr": "DEN",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
-      "score": 28,
-      "winner": true
-     }
-    },
-    {
      "id": "401873045",
      "date": "2026-11-08T18:00Z",
-     "state": "pre",
-     "detail": "11/8 - 1:00 PM EST",
+     "state": "post",
+     "detail": "Final",
      "away": {
       "id": "20",
       "abbr": "NYJ",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png",
-      "score": null,
+      "score": 12,
       "winner": false
      },
      "home": {
       "id": "12",
       "abbr": "KC",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
-      "score": null,
-      "winner": false
+      "score": 35,
+      "winner": true
      }
     },
     {
@@ -69,6 +49,26 @@
       "score": null,
       "winner": false
      }
+    },
+    {
+     "id": "401873067",
+     "date": "2026-11-22T18:00Z",
+     "state": "pre",
+     "detail": "11/22 - 1:00 PM EST",
+     "away": {
+      "id": "22",
+      "abbr": "ARI",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "12",
+      "abbr": "KC",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/kc.png",
+      "score": null,
+      "winner": false
+     }
     }
    ]
   },
@@ -77,47 +77,27 @@
    "id": "11",
    "name": "Devils",
    "full": "New Jersey Devils",
-   "record": "12-5-0",
+   "record": "13-5-0",
    "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
    "color": "#c8102e",
    "games": [
     {
-     "id": "401892667",
-     "date": "2026-11-08T00:00Z",
-     "state": "post",
-     "detail": "Final/OT",
-     "away": {
-      "id": "11",
-      "abbr": "NJ",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": 5,
-      "winner": true
-     },
-     "home": {
-      "id": "12",
-      "abbr": "NYI",
-      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nyi.png",
-      "score": 4,
-      "winner": false
-     }
-    },
-    {
      "id": "401892676",
      "date": "2026-11-09T00:00Z",
-     "state": "pre",
-     "detail": "11/8 - 7:00 PM EST",
+     "state": "post",
+     "detail": "Final",
      "away": {
       "id": "11",
       "abbr": "NJ",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
-      "score": null,
-      "winner": false
+      "score": 4,
+      "winner": true
      },
      "home": {
       "id": "21",
       "abbr": "TOR",
       "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
-      "score": null,
+      "score": 0,
       "winner": false
      }
     },
@@ -140,6 +120,26 @@
       "score": null,
       "winner": false
      }
+    },
+    {
+     "id": "401892700",
+     "date": "2026-11-13T00:00Z",
+     "state": "pre",
+     "detail": "11/12 - 7:00 PM EST",
+     "away": {
+      "id": "23",
+      "abbr": "WSH",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "11",
+      "abbr": "NJ",
+      "logo": "https://a.espncdn.com/i/teamlogos/nhl/500/nj.png",
+      "score": null,
+      "winner": false
+     }
     }
    ]
   },
@@ -148,48 +148,28 @@
    "id": "25",
    "name": "49ers",
    "full": "San Francisco 49ers",
-   "record": "6-1",
+   "record": "7-1",
    "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
    "color": "#aa0000",
    "games": [
     {
-     "id": "401873017",
-     "date": "2026-10-25T17:00Z",
-     "state": "post",
-     "detail": "Final",
-     "away": {
-      "id": "25",
-      "abbr": "SF",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
-      "score": 20,
-      "winner": false
-     },
-     "home": {
-      "id": "1",
-      "abbr": "ATL",
-      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
-      "score": 29,
-      "winner": true
-     }
-    },
-    {
      "id": "401873047",
      "date": "2026-11-08T21:25Z",
-     "state": "pre",
-     "detail": "11/8 - 4:25 PM EST",
+     "state": "post",
+     "detail": "Final",
      "away": {
       "id": "13",
       "abbr": "LV",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/lv.png",
-      "score": null,
+      "score": 17,
       "winner": false
      },
      "home": {
       "id": "25",
       "abbr": "SF",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
-      "score": null,
-      "winner": false
+      "score": 38,
+      "winner": true
      }
     },
     {
@@ -208,6 +188,26 @@
       "id": "6",
       "abbr": "DAL",
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/dal.png",
+      "score": null,
+      "winner": false
+     }
+    },
+    {
+     "id": "401873077",
+     "date": "2026-11-23T01:20Z",
+     "state": "pre",
+     "detail": "11/22 - 8:20 PM EST",
+     "away": {
+      "id": "16",
+      "abbr": "MIN",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/min.png",
+      "score": null,
+      "winner": false
+     },
+     "home": {
+      "id": "25",
+      "abbr": "SF",
+      "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
       "score": null,
       "winner": false
      }
